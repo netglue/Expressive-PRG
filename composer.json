@@ -2,6 +2,13 @@
     "name": "netglue/expressive-prg",
     "description": "Middleware to implement the Post/Redirect/Get pattern in Zend Expressive",
     "type": "library",
+    "keywords": [
+        "zend",
+        "expressive",
+        "netglue",
+        "prg"
+    ],
+    "homepage": "https://github.com/netglue/Expressive-PRG",
     "require": {
         "zendframework/zend-expressive": "^1.0",
         "zendframework/zend-session": "^2.7"
@@ -25,5 +32,8 @@
         "psr-4": {
             "NetglueExpressiveTest\\": "test/NetglueExpressiveTest"
         }
+    },
+    "scripts": {
+        "test": "phpunit"
     }
 }

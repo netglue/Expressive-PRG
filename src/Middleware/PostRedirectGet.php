@@ -14,6 +14,9 @@ use Psr\Http\Message\ServerRequestInterface as Request;
 use Zend\Session\Container;
 use Zend\Diactoros\Response\RedirectResponse;
 
+/**
+ * Middleware to implement the PRG Pattern in a Zend Expressive app
+ */
 class PostRedirectGet
 {
 
@@ -29,6 +32,7 @@ class PostRedirectGet
 
     /**
      * Session Container
+     *
      * @var Container
      */
     protected $container;
@@ -41,8 +45,11 @@ class PostRedirectGet
      * @param  callable $next
      * @return Response
      */
-    public function __invoke(Request $request, Response $response, callable $next = null)
-    {
+    public function __invoke(
+        Request $request,
+        Response $response,
+        callable $next = null
+    ) {
         $method    = $request->getMethod();
         $container = $this->getSessionContainer();
 
@@ -79,6 +86,7 @@ class PostRedirectGet
 
     /**
      * Return session container
+     *
      * @return Container
      */
     public function getSessionContainer() : Container
@@ -92,7 +100,8 @@ class PostRedirectGet
 
     /**
      * Set session container
-     * @param Container $container
+     *
+     * @param  Container $container
      * @return void
      */
     public function setSessionContainer(Container $container)
