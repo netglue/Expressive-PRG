@@ -10,7 +10,7 @@
     ],
     "homepage": "https://github.com/netglue/Expressive-PRG",
     "require": {
-        "zendframework/zend-expressive": "^1.0",
+        "zendframework/zend-expressive": "^1.0 || ^2.0",
         "zendframework/zend-session": "^2.7"
     },
     "require-dev": {
